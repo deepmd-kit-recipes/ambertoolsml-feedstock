@@ -1,9 +1,1 @@
 csh
-libXt-devel
-libXext-devel
-libX11-devel
-libICE-devel
-libSM-devel
-xorg-x11-proto-devel
-libuuid-devel
-libxcb

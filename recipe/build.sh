@@ -15,7 +15,7 @@ export DEBUG_FFLAGS=${DEBUG_FFLAGS//-fopenmp }
 export CXXFLAGS="${CXXFLAGS} -pthread"
 
 CMAKE_FLAGS=""
-BUILD_GUI="TRUE"
+BUILD_GUI="FALSE"
 
 if [ ${cuda_compiler_version} != "None" ]; then
     export DEEPMD_CUDA_LINK="-DMLCUDA -I/usr/local/cuda/include"

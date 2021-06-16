@@ -36,14 +36,14 @@ requirements:
     - cmake
     - perl
     - mkl
-    - {{ cdt('libxt-devel') }}  # [unix]
-    - {{ cdt('libxext-devel') }}   # [unix]
-    - {{ cdt('libx11-devel') }}   # [unix]
-    - {{ cdt('libice-devel') }}   # [unix]
-    - {{ cdt('libsm-devel') }}   # [unix]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [unix]
-    - {{ cdt('libuuid-devel') }}  # [unix]
-    - {{ cdt('libxcb') }}  # [unix]
+    #- {{ cdt('libxt-devel') }}  # [unix]
+    #- {{ cdt('libxext-devel') }}   # [unix]
+    #- {{ cdt('libx11-devel') }}   # [unix]
+    #- {{ cdt('libice-devel') }}   # [unix]
+    #- {{ cdt('libsm-devel') }}   # [unix]
+    #- {{ cdt('xorg-x11-proto-devel') }}  # [unix]
+    #- {{ cdt('libuuid-devel') }}  # [unix]
+    #- {{ cdt('libxcb') }}  # [unix]
   host:
     - python
     - setuptools
