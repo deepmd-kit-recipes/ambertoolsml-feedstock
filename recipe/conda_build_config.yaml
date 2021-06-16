@@ -21,11 +21,11 @@ cudnn:
 #- 7
 - 7
 c_compiler_version:
-- 8
+- 7
 cxx_compiler_version:
-- 8
+- 7
 fortran_compiler_version:
-- 8
+- 7
 cdt_name:
 - cos7
 #- cos7

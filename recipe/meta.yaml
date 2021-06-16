@@ -61,6 +61,7 @@ requirements:
     - readline
     - mkl
     - libdeepmd {{ dp_version }} *{{ dp_variant }}
+    - cudatoolkit {{ cuda_compiler_version }}
     - mpich
   run:
     - python

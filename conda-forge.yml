@@ -4,3 +4,4 @@ channels:
   targets:
     -
       - ambertoolsml
+channel_priority: flexible
