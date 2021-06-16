@@ -5,9 +5,9 @@ bzip2:
 c_compiler:
 - gcc
 c_compiler_version:
-- '7'
+- '8'
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - deepmodeling/label/dev,deepmodeling,defaults
 channel_targets:
@@ -19,11 +19,11 @@ cuda_compiler_version:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '7'
+- '8'
 docker_image:
-- quay.io/condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 dp_version:
-- 2.0.0.b1
+- 2.0.0.b2
 fftw:
 - '3'
 fortran_compiler:
