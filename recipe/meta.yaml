@@ -18,7 +18,7 @@ source:
     - dp2.patch
 
 build:
-  number: 3
+  number: 4
   string: "py{{ py }}_{{ PKG_BUILDNUM }}_cuda{{ cuda_compiler_version }}_{{ dp_variant }}"
   skip: True  # [win or py2k]
   skip: True  # [not linux]
@@ -61,7 +61,6 @@ requirements:
     - readline
     - mkl
     - libdeepmd {{ dp_version }} *{{ dp_variant }}
-    - cudatoolkit {{ cuda_compiler_version }}*  # [cuda_compiler_version != 'None']
     - mpich
   run:
     - python
@@ -76,8 +75,7 @@ requirements:
     - libopenblas
     - readline
     - mkl
-    - {{ pin_compatible('libdeepmd', exact=True) }}
-    - {{ pin_compatible('cudatoolkit', max_pin='x.x') }}  # [cuda_compiler_version != 'None']
+    - libdeepmd >=2.0.0.a0 *{{ dp_variant }}
     - mpich
   run_constrained:
     - ambermini ==9999999999
