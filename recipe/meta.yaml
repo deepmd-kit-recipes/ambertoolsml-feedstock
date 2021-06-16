@@ -45,12 +45,12 @@ requirements:
     #- {{ cdt('libuuid-devel') }}  # [unix]
     #- {{ cdt('libxcb') }}  # [unix]
   host:
-    - python
-    - setuptools
-    - cython
-    - numpy
-    - scipy
-    - matplotlib-base
+    #- python
+    #- setuptools
+    #- cython
+    #- numpy
+    #- scipy
+    #- matplotlib-base
     - bzip2
     - zlib
     - boost-cpp
@@ -64,12 +64,12 @@ requirements:
     - cudatoolkit {{ cuda_compiler_version }}
     - mpich
   run:
-    - python
+    #- python
     - perl
-    - cython
-    - numpy
-    - scipy
-    - matplotlib-base
+    #- cython
+    #- numpy
+    #- scipy
+    #- matplotlib-base
     - boost-cpp
     - libnetcdf
     - fftw
@@ -98,12 +98,12 @@ test:
     - README
 {% endif %}
   # commands: check run_test.sh for CLI tests
-  imports:
-    - parmed
-    - pdb4amber
-    - pymsmt
-    - pytraj
-    - sander
+  #imports:
+  #  - parmed
+  #  - pdb4amber
+  #  - pymsmt
+  #  - pytraj
+  #  - sander
 
 about:
   home: http://ambermd.org/AmberTools.php

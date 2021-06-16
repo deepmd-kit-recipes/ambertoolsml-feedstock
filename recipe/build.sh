@@ -30,23 +30,27 @@ cd build
 cmake ${SRC_DIR} ${CMAKE_FLAGS} \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -DCOMPILER=MANUAL \
-    -DPYTHON_EXECUTABLE=${PYTHON} \
+	-DBUILD_PYTHON=FALSE \
     -DBUILD_GUI=${BUILD_GUI} \
     -DCHECK_UPDATES=FALSE \
     -DTRUST_SYSTEM_LIBS=TRUE \
-	-DCMAKE_CXX_FLAGS="${flibs_ml}"
+	-DDOWNLOAD_MINICONDA=FALSE \
+	-DCMAKE_CXX_FLAGS="${CXXFLAGS} ${flibs_ml}"
+    #-DPYTHON_EXECUTABLE=${PYTHON} \
 
 make && make install
 
 cmake ${SRC_DIR} ${CMAKE_FLAGS} \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -DCOMPILER=MANUAL \
-    -DPYTHON_EXECUTABLE=${PYTHON} \
+	-DBUILD_PYTHON=FALSE \
     -DBUILD_GUI=${BUILD_GUI} \
     -DCHECK_UPDATES=FALSE \
     -DTRUST_SYSTEM_LIBS=TRUE \
-	-DCMAKE_CXX_FLAGS="${flibs_ml}" \
+	-DCMAKE_CXX_FLAGS="${CXXFLAGS} ${flibs_ml}" \
+	-DDOWNLOAD_MINICONDA=FALSE \
     -DMPI=TRUE
+    #-DPYTHON_EXECUTABLE=${PYTHON} \
 
 make && make install
 
@@ -60,4 +64,4 @@ cp ${RECIPE_DIR}/deactivate.fish ${PREFIX}/etc/conda/deactivate.d/ambertools.fis
 
 
 # Fix https://github.com/conda-forge/ambertools-feedstock/issues/35
-cp ${RECIPE_DIR}/patches/parmed_version.py ${SP_DIR}/parmed/_version.py
+#cp ${RECIPE_DIR}/patches/parmed_version.py ${SP_DIR}/parmed/_version.py
