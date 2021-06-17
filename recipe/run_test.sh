@@ -61,54 +61,54 @@ conda list
 add_pdb -h
 add_xray -h
 am1bcc -h
-amb2chm_par.py -h
-amb2chm_psf_crd.py -h
-amb2gro_top_gro.py -h
+#amb2chm_par.py -h
+#amb2chm_psf_crd.py -h
+#amb2gro_top_gro.py -h
 ambmask -h
 ambpdb -h
-ante-MMPBSA.py -h
+#ante-MMPBSA.py -h
 antechamber -h
 atomtype -h
 bondtype -h
-car_to_files.py -h
-CartHess2FC.py -h
-ceinutil.py -h
-cpeinutil.py -h
-cpinutil.py -h
+#car_to_files.py -h
+#CartHess2FC.py -h
+#ceinutil.py -h
+#cpeinutil.py -h
+#cpinutil.py -h
 cpptraj -h
 draw_membrane2
 espgen -h
-espgen.py -h
+#espgen.py -h
 FEW.pl -h
 ffgbsa -h
-finddgref.py -h
-fitpkaeo.py -h
-fixremdcouts.py -h
-genremdinputs.py -h
-IPMach.py -h
+#finddgref.py -h
+#fitpkaeo.py -h
+#fixremdcouts.py -h
+#genremdinputs.py -h
+#IPMach.py -h
 makeANG_RST -help
-MCPB.py -h
+#MCPB.py -h
 mdgx -h
 mdnab -h
 mdout2pymbar.pl -h
-metalpdb2mol2.py -h
+#metalpdb2mol2.py -h
 minab -h
-MMPBSA.py -h
-mol2rtf.py -h
+#MMPBSA.py -h
+#mol2rtf.py -h
 nfe-umbrella-slice -h
 packmol-memgen -h
 parmed -h
 pdb4amber -h
-PdbSearcher.py -h
+#PdbSearcher.py -h
 prepgen -h
-ProScrs.py -h
+#ProScrs.py -h
 pymdpbsa -h
 pytleap -h
 reduce -V
 resp -h
 respgen -h
 saxs_md -h
-softcore_setup.py -h
+#softcore_setup.py -h
 sqm -h
 sviol -h
 teLeap -h
@@ -120,7 +120,7 @@ mm_pbsa_statistics.pl || true
 mm_pbsa.pl || true
 
 # Debug https://github.com/conda-forge/ambertools-feedstock/issues/35
-python -c "import parmed; print(parmed.__version__); assert parmed.version > (3, 2), f'Wrong version: {parmed.version}'"
+#python -c "import parmed; print(parmed.__version__); assert parmed.version > (3, 2), f'Wrong version: {parmed.version}'"
 
 # These two commands need csh, but CF only has tcsh
 ln -s ${PREFIX}/bin/tcsh ${PREFIX}/bin/csh
