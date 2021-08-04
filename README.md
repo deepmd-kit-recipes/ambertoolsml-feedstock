@@ -41,10 +41,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_cuda_compiler_version11.3</td>
+              <td>
+                <a href="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_build/latest?definitionId=&branchName=master">
+                  <img src="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_apis/build/status/ambertoolsml-feedstock?branchName=master&jobName=linux&configuration=linux_64_cuda_compiler_version11.3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_cuda_compiler_versionNone</td>
               <td>
                 <a href="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_build/latest?definitionId=&branchName=master">
                   <img src="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_apis/build/status/ambertoolsml-feedstock?branchName=master&jobName=linux&configuration=linux_64_cuda_compiler_versionNone" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_cuda_compiler_version10.2</td>
+              <td>
+                <a href="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_build/latest?definitionId=&branchName=master">
+                  <img src="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_apis/build/status/ambertoolsml-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_cuda_compiler_version10.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_cuda_compiler_versionNone</td>
+              <td>
+                <a href="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_build/latest?definitionId=&branchName=master">
+                  <img src="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_apis/build/status/ambertoolsml-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_cuda_compiler_versionNone" alt="variant">
                 </a>
               </td>
             </tr>

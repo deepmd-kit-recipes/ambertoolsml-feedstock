@@ -1,0 +1,13 @@
+diff --git a/AmberTools/src/sander/ml.cpp b/AmberTools/src/sander/ml.cpp
+index ab7158a63d..0acee6aac3 100644
+--- a/AmberTools/src/sander/ml.cpp
++++ b/AmberTools/src/sander/ml.cpp
+@@ -470,7 +470,7 @@ void mlevaluator::cpt_ml
+ {
+   //GLBCNT++;
+   
+-  double const KCAL_PER_EV = 23.06;
++  double const KCAL_PER_EV = 1./0.04336410390059322;
+ 
+   *ml_ene = 0.;
+ 

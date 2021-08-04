@@ -16,9 +16,10 @@ source:
   patches:
     - print_maxstd.patch
     - dp2.patch
+    - kcalev.patch
 
 build:
-  number: 4
+  number: 6
   string: "{{ PKG_BUILDNUM }}_{{ dp_variant }}"
   skip: True  # [win or py2k]
   skip: True  # [not linux]
