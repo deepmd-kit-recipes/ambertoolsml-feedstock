@@ -36,7 +36,7 @@ requirements:
     - make
     - cmake
     - perl
-    - mkl
+    - mkl  # [linux64]
     #- {{ cdt('libxt-devel') }}  # [unix]
     #- {{ cdt('libxext-devel') }}   # [unix]
     #- {{ cdt('libx11-devel') }}   # [unix]
@@ -60,7 +60,7 @@ requirements:
     - fftw
     - libopenblas
     - readline
-    - mkl
+    - mkl  # [linux64]
     - libdeepmd {{ dp_version }} *{{ dp_variant }}
     - cudatoolkit {{ cuda_compiler_version }}
     - mpich
@@ -76,7 +76,7 @@ requirements:
     - fftw
     - libopenblas
     - readline
-    - mkl
+    - mkl  # [linux64]
     - libdeepmd >=2.0.0.a0 *{{ dp_variant }}
     - mpich
   run_constrained:
