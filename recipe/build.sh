@@ -17,12 +17,7 @@ export CXXFLAGS="${CXXFLAGS} -pthread"
 CMAKE_FLAGS=""
 BUILD_GUI="FALSE"
 
-if [ ${cuda_compiler_version} != "None" ]; then
-    export DEEPMD_CUDA_LINK="-DMLCUDA -I/usr/local/cuda/include"
-else
-	export DEEPMD_CUDA_LINK=""
-fi
-export flibs_ml="${DEEPMD_CUDA_LINK} -DHIGH_PREC -L ${PREFIX}/lib -Wl,--no-as-needed -lrt -ldeepmd_op -ldeepmd -ldeepmd_cc -ltensorflow_cc -ltensorflow_framework -lstdc++ -Wl,-rpath=${PREFIX}/lib"
+export flibs_ml="${DEEPMD_CUDA_LINK} -DMLCUDA -DHIGH_PREC -L ${PREFIX}/lib -Wl,--no-as-needed -lrt -ldeepmd_op -ldeepmd -ldeepmd_cc -ltensorflow_cc -ltensorflow_framework -lstdc++ -Wl,-rpath=${PREFIX}/lib"
 
 # Build AmberTools with cmake
 mkdir -p build

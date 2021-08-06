@@ -1,0 +1,57 @@
+From d9a6e9c0a3b58a1fcb804d45a932d4e06f7116cc Mon Sep 17 00:00:00 2001
+From: Jinzhe Zeng <jinzhe.zeng@rutgers.edu>
+Date: Thu, 5 Aug 2021 20:48:48 -0400
+Subject: [PATCH] fix unit and remove cuda.h
+
+---
+ AmberTools/src/sander/ml.cpp | 20 +-------------------
+ 1 file changed, 1 insertion(+), 19 deletions(-)
+
+diff --git a/AmberTools/src/sander/ml.cpp b/AmberTools/src/sander/ml.cpp
+index ab7158a63d..223d3c8359 100644
+--- a/AmberTools/src/sander/ml.cpp
++++ b/AmberTools/src/sander/ml.cpp
+@@ -17,7 +17,6 @@
+ #endif
+ 
+ #ifdef MLCUDA
+-#include <cuda.h>
+ #include <builtin_types.h>
+ // # i nclude <drvapi_error_string.h>
+ #endif
+@@ -470,7 +469,7 @@ void mlevaluator::cpt_ml
+ {
+   //GLBCNT++;
+   
+-  double const KCAL_PER_EV = 23.06;
++  double const KCAL_PER_EV = 1./0.04336410390059322;
+ 
+   *ml_ene = 0.;
+ 
+@@ -884,23 +883,6 @@ std::tr1::shared_ptr< mlevaluator > pinterml;
+ std::tr1::shared_ptr< mlevaluator > pintraml;
+ 
+ 
+-#ifdef MLCUDA
+-
+-#define checkCudaErrors(err)  __checkCudaErrors (err, __FILE__, __LINE__)
+-
+-// These are the inline versions for all of the SDK helper functions
+-inline void __checkCudaErrors(CUresult err, const char *file, const int line)
+-{
+-    if (CUDA_SUCCESS != err)
+-    {
+-       const char * pStr = NULL;
+-       cuGetErrorString( err, &pStr );
+-       std::fprintf(stderr, "checkCudaErrors() Driver API error = %04d \"%s\" from file <%s>, line %i.\n",
+-                err, pStr, file, line);
+-       std::exit(EXIT_FAILURE);
+-    }
+-}
+-#endif
+ 
+ void new_ml_( int const * ninter,
+ 	      char ** interfile,
+-- 
+2.31.1
+
