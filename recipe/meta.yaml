@@ -11,6 +11,7 @@ source:
     - print_maxstd.patch
     - dp2.patch
     - 0001-fix-unit-and-remove-cuda.h.patch
+    - 0001-remove-unused-reference.patch
 
 build:
   number: 6
