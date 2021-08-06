@@ -1,12 +1,6 @@
 {% set name = "AmberToolsML" %}
 {% set version = "2021.04.20" %}
 
-{% if cuda_compiler_version == "None" %}
-{% set dp_variant = "cpu" %}
-{% else %}
-{% set dp_variant = "gpu" %}
-{% endif %}
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -16,14 +10,13 @@ source:
   patches:
     - print_maxstd.patch
     - dp2.patch
+    - 0001-fix-unit-and-remove-cuda.h.patch
 
 build:
-  number: 4
-  string: "{{ PKG_BUILDNUM }}_{{ dp_variant }}"
+  number: 6
+  string: "{{ PKG_BUILDNUM }}"
   skip: True  # [win or py2k]
   skip: True  # [not linux]
-  skip: True  # [cuda_compiler_version == '9.2']
-  skip: True  # [cuda_compiler_version == '10.0']
 
 requirements:
   build:
@@ -35,7 +28,7 @@ requirements:
     - make
     - cmake
     - perl
-    - mkl
+    - mkl  # [linux64]
     #- {{ cdt('libxt-devel') }}  # [unix]
     #- {{ cdt('libxext-devel') }}   # [unix]
     #- {{ cdt('libx11-devel') }}   # [unix]
@@ -59,9 +52,8 @@ requirements:
     - fftw
     - libopenblas
     - readline
-    - mkl
-    - libdeepmd {{ dp_version }} *{{ dp_variant }}
-    - cudatoolkit {{ cuda_compiler_version }}
+    - mkl  # [linux64]
+    - libdeepmd {{ dp_version }}
     - mpich
   run:
     #- python
@@ -75,8 +67,8 @@ requirements:
     - fftw
     - libopenblas
     - readline
-    - mkl
-    - libdeepmd >=2.0.0.a0 *{{ dp_variant }}
+    - mkl  # [linux64]
+    - libdeepmd >=2.0.0.a0
     - mpich
   run_constrained:
     - ambermini ==9999999999
