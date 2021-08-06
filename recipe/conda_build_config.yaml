@@ -1,7 +1,8 @@
 # use run or skip
 unit_tests: skip
 channel_sources:
-  - deepmodeling/label/dev,deepmodeling,https://conda.deepmodeling.org/,defaults
+  - deepmodeling/label/dev,deepmodeling,https://conda.deepmodeling.org/,defaults  # [linux64]
+  - deepmodeling/label/dev,deepmodeling,https://conda.deepmodeling.org/,defaults, conda-forge  # [ppc64le]
 channel_targets:
   - ambertoolsml main
 libnetcdf:

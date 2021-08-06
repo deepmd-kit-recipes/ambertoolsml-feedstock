@@ -12,16 +12,12 @@ channel_sources:
 - deepmodeling/label/dev,deepmodeling,https://conda.deepmodeling.org/,defaults
 channel_targets:
 - ambertoolsml main
-cuda_compiler:
-- nvcc
-cuda_compiler_version:
-- None
 cxx_compiler:
 - gxx
 cxx_compiler_version:
 - '7'
 docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- ghcr.io/deepmd-kit-recipes/linux-anvil-cuda:11.3
 dp_version:
 - 2.0.0.b4
 fftw:
@@ -63,8 +59,7 @@ zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
   - fortran_compiler_version
-- - cuda_compiler_version
-  - cdt_name
+- - cdt_name
   - docker_image
 zlib:
 - '1.2'
