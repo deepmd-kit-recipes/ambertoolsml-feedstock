@@ -14,7 +14,7 @@ source:
     - 0001-remove-unused-reference.patch
 
 build:
-  number: 6
+  number: 7
   string: "{{ PKG_BUILDNUM }}"
   skip: True  # [win or py2k]
   skip: True  # [not linux]
