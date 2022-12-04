@@ -1,20 +1,15 @@
-{% set name = "AmberToolsML" %}
-{% set version = "2021.04.20" %}
+{% set name = "AmberDPRc" %}
+{% set version = "2022.11.22" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://public.njzjz.win/AmberTools20ml.20apr21.tar.bz2
-  patches:
-    - print_maxstd.patch
-    - dp2.patch
-    - 0001-fix-unit-and-remove-cuda.h.patch
-    - 0001-remove-unused-reference.patch
+  url: https://gitlab.com/RutgersLBSR/AmberDPRc/-/raw/39e7cd61efe6b60ad7516fe045feaafd49dd48cb/amber20ml_src.tar.bz2
 
 build:
-  number: 7
+  number: 0
   string: "{{ PKG_BUILDNUM }}"
   skip: True  # [win or py2k]
   skip: True  # [not linux]
@@ -99,7 +94,7 @@ test:
   #  - sander
 
 about:
-  home: http://ambermd.org/AmberTools.php
+  home: https://gitlab.com/RutgersLBSR/AmberDPRc/
   license: Multiple
   license_file: AmberTools/LICENSE
   summary: 'AmberTools is a set of programs for biomolecular simulation and analysis'
