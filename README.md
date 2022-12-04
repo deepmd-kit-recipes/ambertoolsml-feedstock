@@ -40,13 +40,6 @@ Current build status
                   <img src="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_apis/build/status/ambertoolsml-feedstock?branchName=master&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>linux_ppc64le</td>
-              <td>
-                <a href="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/deepmd-kit-recipes/feedstock-builds/_apis/build/status/ambertoolsml-feedstock?branchName=master&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
