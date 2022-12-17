@@ -42,14 +42,14 @@ requirements:
     #- matplotlib-base
     - bzip2
     - zlib
-    - libboost
+    - boost-cpp
     - libnetcdf
     - pthread-stubs
     - fftw
     - libopenblas
     - readline
     - mkl  # [linux64]
-    - libdeepmd {{ dp_version }}
+    - deepmd-kit>=2.1.5
     - mpich
   run:
     #- python
@@ -58,13 +58,13 @@ requirements:
     #- numpy
     #- scipy
     #- matplotlib-base
-    - libboost
+    - boost-cpp
     - libnetcdf
     - fftw
     - libopenblas
     - readline
     - mkl  # [linux64]
-    - libdeepmd >=2.0.0.a0
+    - deepmd-kit>=2.1.5
     - mpich
   run_constrained:
     - ambermini ==9999999999
