@@ -42,7 +42,7 @@ requirements:
     #- matplotlib-base
     - bzip2
     - zlib
-    - boost-cpp
+    - libboost
     - libnetcdf
     - pthread-stubs
     - fftw
@@ -58,7 +58,7 @@ requirements:
     #- numpy
     #- scipy
     #- matplotlib-base
-    - boost-cpp
+    - libboost
     - libnetcdf
     - fftw
     - libopenblas
