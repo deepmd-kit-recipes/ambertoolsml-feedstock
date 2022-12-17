@@ -7,6 +7,8 @@ package:
 
 source:
   url: https://gitlab.com/RutgersLBSR/AmberDPRc/-/raw/39e7cd61efe6b60ad7516fe045feaafd49dd48cb/amber20ml_src.tar.bz2
+  patches:
+   - 0001-add-ipimod-to-CMakeLists.patch
 
 build:
   number: 0
