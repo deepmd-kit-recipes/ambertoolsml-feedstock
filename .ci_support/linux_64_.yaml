@@ -1,5 +1,5 @@
 boost_cpp:
-- 1.73.0
+- 1.78.0
 bzip2:
 - '1'
 c_compiler:
@@ -25,7 +25,7 @@ fortran_compiler:
 fortran_compiler_version:
 - '11'
 libnetcdf:
-- 4.6.1
+- 4.8.1
 mkl:
 - '2022'
 mpich:
