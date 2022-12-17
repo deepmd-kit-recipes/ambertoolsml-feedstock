@@ -1,24 +1,24 @@
-From 8905b9a252d50e1b75149bbd71fc3246c6669da3 Mon Sep 17 00:00:00 2001
+From 0d53f66aa123e956ecc0630540bbc2219daa0b85 Mon Sep 17 00:00:00 2001
 From: Jinzhe Zeng <jinzhe.zeng@rutgers.edu>
-Date: Mon, 11 Apr 2022 16:31:32 -0400
-Subject: [PATCH] add ipimod to CMakeLists
+Date: Sat, 17 Dec 2022 04:09:51 -0500
+Subject: [PATCH] add missing files to cmake
 
 ---
  AmberTools/src/sander/CMakeLists.txt | 1 +
  1 file changed, 1 insertion(+)
 
 diff --git a/AmberTools/src/sander/CMakeLists.txt b/AmberTools/src/sander/CMakeLists.txt
-index f4e32ee0c6..d0501306ba 100644
+index d536a88d05..3483896cdd 100644
 --- a/AmberTools/src/sander/CMakeLists.txt
 +++ b/AmberTools/src/sander/CMakeLists.txt
-@@ -33,6 +33,7 @@ set(SANDER_COMMON_SOURCE resamplekin.F90 boost-gamma-distribution.cpp les.F90 st
-     nfe-smd-hooks.F90 nfe-umbrella.F90 nfe-utils.F90 nfe-value.F90 mt19937.F90
+@@ -34,6 +34,7 @@ set(SANDER_COMMON_SOURCE resamplekin.F90 boost-gamma-distribution.cpp les.F90 st
      pol_gauss.F90 quench.F90 external.F90 relaxmd.F90 music_module.F90 constante.F90
      mlmod.F90 ml.cpp f90stream.cpp f90stream_mod.F90 f90stream.hpp
-+	ipimod.F90 fsockets_pure.F90
+ 	ipimod.F90 fsockets_pure.F90
++	fragqmmod.F90
      rattle.F90 md_scheme.F90)
  
  set(EMIL_SOURCE emil.F90 mdin_emil_dat.F90)
 -- 
-2.35.1
+2.38.1
 
